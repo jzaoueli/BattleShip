@@ -1,3 +1,5 @@
+package Yahima;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -37,6 +39,6 @@ public class Game {
 		    }
 		    rounds++;
 		}
-		System.out.println("Du hast das Spiel nach Abgabe von " + rounds + " Schüssen gewonnen!");
+		System.out.println("Du hast das Spiel nach Abgabe von " + rounds + " Schï¿½ssen gewonnen!");
 	}
 }
