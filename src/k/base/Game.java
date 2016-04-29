@@ -35,7 +35,7 @@ public class Game {
                 System.out.println("kein Treffer");
             } else {
                 System.out.println("Treffer");
-                field[coordination.charAt(0) - 97][Character.getNumericValue(coordination.charAt(1)) - 1] = ("*");
+                field[coordination.charAt(0) - 97][Character.getNumericValue(coordination.charAt(1)) - 1] = ("0");
             }
         }
         if (testWinGame())
