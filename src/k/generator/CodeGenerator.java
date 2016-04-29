@@ -6,9 +6,9 @@ public class CodeGenerator {
     public static void main(String[] args) throws IOException {
 
         String generatedStr =
-                "package k.base;\n\n" +
-                        "public class Field {\n" +
-                        "private static String[][] field = new String[][]{\n";
+                "package k.generated;\n\n" +
+                        "public class Field {\n\n" +
+                        "   private static String[][] field = new String[][]{\n";
 
 
         try (BufferedReader br = new BufferedReader(new FileReader("src/k/model.txt"))) {
@@ -16,7 +16,7 @@ public class CodeGenerator {
             String generatedLine;
             for (int i = 0; i < 7; i++) {
                 line = br.readLine();
-                generatedLine = "{";
+                generatedLine = "       {";
                 for (int j = 0; j < 7; j++) {
                     generatedLine = generatedLine + "\"" + line.charAt(j) + "\",";
                 }
@@ -29,10 +29,10 @@ public class CodeGenerator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        generatedStr = generatedStr.substring(0, generatedStr.length() - 2) + "\n};\n"
-                + "public static String[][] getField(){\n"
-                + "return field;\n"
-                + "}\n}";
+        generatedStr = generatedStr.substring(0, generatedStr.length() - 2) + "\n   };\n\n"
+                + "   public static String[][] getField(){\n"
+                + "     return field;\n"
+                + "   }\n}";
 
         File file = new File("src/k/generated/Field.java");
         file.createNewFile();
