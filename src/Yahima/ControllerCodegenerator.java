@@ -1,4 +1,4 @@
-package Yahima;
+package yahima;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

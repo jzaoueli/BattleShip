@@ -1,4 +1,4 @@
-package Yahima;
+package yahima;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -12,10 +12,10 @@ public class Codegenerator {
 	
 	public static void createFile() throws IOException{
 		
-	    FileWriter fw = new FileWriter("src/Yahima.Array.java");
+	    FileWriter fw = new FileWriter("src/yahima.Array.java");
 	    BufferedWriter bw = new BufferedWriter(fw);
 
-	    bw.write( "public class Yahima.Array {\n"
+	    bw.write( "public class yahima.Array {\n"
 	    		+ "static String[][] createArray(String s){\n"
 	    		+ "String[][] playField = new String[7][7];\n"
 	    		+ "int index = 0;\n"

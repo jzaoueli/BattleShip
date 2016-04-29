@@ -1,4 +1,4 @@
-package Yahima;
+package yahima;
 
 public class Array {
 static String[][] createArray(String s){
